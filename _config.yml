@@ -5,7 +5,7 @@ welcome_message: <a href="https://kekeyezi.github.io" target="_blank"> 爱游戏
 description: 我是叶斌 (Keke) 就职国泰君安.
 # creator: <a href="https://kekeyezi.github.io">@onevcat</a>
 
-url: "https://kekeyezi.github.io"
+# url: "https://kekeyezi.github.io"
 
 permalink: /:year/:month/:title/
 
