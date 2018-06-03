@@ -1,0 +1,107 @@
+---
+layout: post  
+title: iOS App 体积优化
+date: 2018-06-03 
+description: iOS优化系列1 iOS App 体积优化
+tags: 优化
+---
+
+
+
+本文为了记录自己优化App，给安装包做瘦身的时候总结的一些思路，方法和脚本。大家可以在这里找到本文用到的一些脚本，我先上一张我解决问题思路的脑图，可以先看也可以回头过来看。只是一个思路的整理。
+
+![App体积优化脑图](https://github.com/kekeYezi/kekeYezi.github.io/blob/master/assets/images/2018-06/App体积优化脑图.png)
+
+​      读者是什么时候想到要去优化自己公司或者自己的app体积呢？广大开发者会想到要优化体积有些是出于想要提升用户的下载体验，有些是对自己的追求。还有一些特殊的，比如与竞争产品的对比也是很重要的一点。那么我们为了完成这些需求可以从哪些角度出发呢？
+
+### 检测自己的App的表现
+
+知己知彼才能百战不殆。首先要知道自己与知名App或者竞争对手App的一个差距才能知道自己在哪方面做的不足。以蚂蚁财富为例：
+
+![ipa分析](/https://github.com/kekeYezi/kekeYezi.github.io/blob/master/assets/images/2018-06/ipa分析.png)
+
+没有后缀的大部分就是二进制文件，占比有百分之82多。
+
+可以对比下数据看看自己的App的体积构成。看看代码占多数，图片占多数，json，plist占多数。
+
+当然二进制的构成也可以根据linkmap分析出来，二进制的一个构成，文章后面也有相关介绍。
+
+知道大体的一个概念之后我们就可以进行实际的优化操作了。针对自己App表现不好的地方对症下药才能效果显著。
+
+
+
+### 可以优化的方向
+
+这里我按照自己的经验列出对最终结果会产生较大收益的点，作为一个优先级排序。
+
+* #### 图片和资源文件
+
+1 图片压缩
+
+大部分开发人员在接收设计师的图片的时候，往往不注意图片的压缩，所以给到的图片直接就加入工程，日积月累就会导致这块的浪费非常之多。从这里（）你可以方便的压缩项目里的所有图片以及统计出压缩比例，采用的是 tinypng（[https://tinypng.com](https://tinypng.com) ）的服务 ，效果如图。
+
+![demo1](https://github.com/kekeYezi/kekeYezi.github.io/blob/master/assets/images/2018-06/demo1.png)
+
+2 图片去重
+
+检查图片文件的md5 作为重复依据，可参考这个脚本
+
+3 除图片代码外的资源
+
+比如，mp3 mp4，json，plist等等。往往有些没用到，有些又没有压缩。针对这些文件的压缩处理大家网上搜索一下就好。
+
+4 动态下载非必须文件
+
+这个得和产品和项目负责人商量哪有有必要哪有不必要。视具体情况而定，但是一股脑都忘App本地塞东西肯定不是什么好的做法。
+
+5 H5页面 远端化
+
+有些页面为了加载速度会把资源和图片都放在本地，但是是否所有的业务都需要这么依赖速度？这个也和上一个情况一样视情况而定吧。
+
+
+
+## 二进制优化&编译选项优化
+
+代码占据了app体积的绝大部份，所以这方便的优化也是重头戏。
+
+1. 去掉未使用的组件库
+2. 根据appCode 和 自己对项目的掌握程度可以知道哪些组件，类，函数是可以删除的。
+3. 重复代码检查
+4. ​
+
+
+
+## 后续流程如何规范
+
+
+
+## 总结
+
+​	这边就只记录对项目帮助到比较大的几个点。其余的大家可以根据脑图一一尝试。相信所有的做下来会对项目有个很大的提升与帮助。
+
+​	在设备越来越好，硬件条件越来越高的时代，可能微不足道的优化或提升并不能体现什么。但是希望每一个工程师都有一份工匠精神，把自己负责的项目也好，模块也好做到极致。这也是我们作为一个优秀程序员的追求吧。
+
+
+
+站在巨人的肩膀上，感谢前辈们的文章。
+
+### 参考文章
+
+[http://www.infoq.com/cn/articles/clang-plugin-ios-app-size-reducing](http://www.infoq.com/cn/articles/clang-plugin-ios-app-size-reducing)
+
+[https://techblog.toutiao.com/2016/12/27/iphone/ ](https://techblog.toutiao.com/2016/12/27/iphone/ )				
+
+[http://blog.cnbang.net/tech/2296/](http://blog.cnbang.net/tech/2296/)
+
+[http://swift.gg/2016/01/07/app-thinning-appcoda/](http://swift.gg/2016/01/07/app-thinning-appcoda/)
+
+[http://ios.jobbole.com/89725/](http://ios.jobbole.com/89725/)
+
+[https://developer.apple.com/library/content/navigation/#section=Topics&topic=Performance](https://developer.apple.com/library/content/navigation/#section=Topics&topic=Performance)
+
+[http://www.cnblogs.com/oc-bowen/p/7692689.html](http://www.cnblogs.com/oc-bowen/p/7692689.html)
+
+[https://github.com/skyming/iOS-Performance-Optimization](https://github.com/skyming/iOS-Performance-Optimization)
+
+[http://www.zoomfeng.com/blog/ipa-size-thin.html](http://www.zoomfeng.com/blog/ipa-size-thin.html)
+
