@@ -1,8 +1,8 @@
 # Basic
 title: Keke Yezi
-subtitle: 重剑无锋 大巧不工
-welcome_message: <a href="https://kekeyezi.github.io" target="_blank"> 爱游戏 & 爱动漫 & 爱编码  & 马上当爸爸了 希望记录自己的编程生涯 </a>
-description: 我是叶斌 (Keke) 就职国泰君安.
+subtitle: Better Late Than Never
+welcome_message: <a href="https://kekeyezi.github.io" target="_blank"> Coding & Game & 初级奶爸 </a>
+description: 我是叶斌 (Kekeyezi) 就职国泰君安.
 # creator: <a href="https://kekeyezi.github.io">@onevcat</a>
 
 # url: "https://kekeyezi.github.io"
@@ -31,8 +31,8 @@ paginate: 10
 paginate_path: "page/:num/"
 
 # Comment
-comment:
-    disqus: vno-jekyll
+# comment:
+#     disqus: vno-jekyll
     # duoshuo: 
     
 # Social
@@ -41,6 +41,6 @@ social:
     mail: kekeyezi1992@163.com
 
 # Google Analytics
-ga:
+# ga:
     # id: your_ga_id
     # host: your_host
