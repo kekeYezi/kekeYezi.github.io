@@ -20,7 +20,7 @@ tags: 优化
 
 没有后缀的大部分就是二进制文件，占比有百分之82多。
 
-可以对比下数据看看自己的App的体积构成。看看代码占多数，图片占多数，json，plist占多数。
+可以对比下数据看看自己的App的体积构成。看看代码占多数，图片占多数，json，plist占多数。脚本代码：https://github.com/kekeYezi/Starfish
 
 当然二进制的构成也可以根据linkmap（http://blog.cnbang.net/tech/2296/）分析出来。
 
@@ -36,7 +36,7 @@ tags: 优化
 
 1. 图片压缩
 
-大部分开发人员在接收设计师的图片的时候，往往不注意图片的压缩，所以给到的图片直接就加入工程，日积月累就会导致这块的浪费非常之多。从这里（）你可以方便的压缩项目里的所有图片以及统计出压缩比例，采用的是 tinypng（[https://tinypng.com](https://tinypng.com) ）的服务 ，效果如图。
+大部分开发人员在接收设计师的图片的时候，往往不注意图片的压缩，所以给到的图片直接就加入工程，日积月累就会导致这块的浪费非常之多。从这里（https://github.com/kekeYezi/Starfish）你可以方便的压缩项目里的所有图片以及统计出压缩比例，采用的是 tinypng（[https://tinypng.com](https://tinypng.com) ）的服务 ，效果如图。
 
 ![demo1](/assets/images/2018-06/demo1.png)
 
