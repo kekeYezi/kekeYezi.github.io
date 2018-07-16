@@ -10,15 +10,13 @@ tags: 优化
 
 17年公司有任务要求减少安装包体积，本文为了记录自己优化App，给安装包做瘦身的时候总结的一些思路，方法和脚本。大家可以在这里找到本文用到的一些脚本，我先上一张我解决问题思路的脑图，可以先看也可以回头过来看。有个简单的概念就好。
 
-![App体积优化通用版](/Users/keke/Desktop/github/kekeYezi.github.io/assets/images/2018-06/App体积优化通用版.png)
-
-辅助脚本：把重要的参数都记录下来。clang插件？
+![](/assets/images/2018-06/App体积优化通用版.png)
 
 ### 检测自己的App的表现
 
 知己知彼才能百战不殆。谁家公司还没有个竞品分析的对手呢？首先要知道自己与知名App或者竞争对手App的一个差距才能知道自己在哪方面做的不足。以蚂蚁财富为例：
 
-![ipa分析](/Users/keke/Desktop/github/kekeYezi.github.io/assets/images/2018-06/ipa分析.png)
+![ipa分析](/assets/images/2018-06/ipa分析.png)
 
 没有后缀的大部分就是二进制文件，占比有百分之82多。
 
@@ -40,7 +38,7 @@ tags: 优化
 
 大部分开发人员在接收设计师的图片的时候，往往不注意图片的压缩，所以给到的图片直接就加入工程，日积月累就会导致这块的浪费非常之多。从这里（）你可以方便的压缩项目里的所有图片以及统计出压缩比例，采用的是 tinypng（[https://tinypng.com](https://tinypng.com) ）的服务 ，效果如图。
 
-![demo1](/Users/keke/Desktop/github/kekeYezi.github.io/assets/images/2018-06/demo1.png)
+![demo1](/assets/images/2018-06/demo1.png)
 
 使用python脚本这里不做过多赘述。
 
@@ -92,6 +90,12 @@ tags: 优化
 
 
 
+TODO：
+
+开发mac版本 方便一键优化，checklist对照
+
+
+
 ## 总结
 
 ​	这边就只记录对项目帮助到比较大的几个点。其余的大家可以根据脑图一一尝试。相信所有的做下来会对项目有个很大的提升与帮助。
@@ -100,7 +104,11 @@ tags: 优化
 
 
 
+Better Late Than Never ，愿我们都能跨出自己的第一步。
+
 站在巨人的肩膀上，感谢前辈们的文章。
+
+
 
 ### 参考文章
 
@@ -119,3 +127,6 @@ tags: 优化
 [http://www.cnblogs.com/oc-bowen/p/7692689.html](http://www.cnblogs.com/oc-bowen/p/7692689.html)
 
 [https://github.com/skyming/iOS-Performance-Optimization](https://github.com/skyming/iOS-Performance-Optimization)
+
+
+
