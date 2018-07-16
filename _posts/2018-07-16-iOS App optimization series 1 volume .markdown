@@ -1,8 +1,8 @@
 ---
 layout: post  
-title: iOS App 体积优化
+title: iOS App Optimization series 1 体积优化 
 date: 2018-06-03 
-description: iOS优化系列1 iOS App 体积优化
+description: iOS App Optimization series 1 体积优化  
 tags: 优化
 ---
 
