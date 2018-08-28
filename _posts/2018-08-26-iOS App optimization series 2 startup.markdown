@@ -6,8 +6,6 @@ description: iOS App Optimization series 2 启动时间优化
 tags: 优化
 ---
 
-## iOS优化系列2：iOS App 启动时间优化
-
 ​	关于启动时间优化网上已经有很多相关资料，但大多数都在翻译和解释WWDC 2016/406 和 2017/413 的内容。苹果爸爸说的当然很对，但是看完可能还是找不到具体的解决方法。所以这里作者从自己实践的角度出发叙述下我从哪些方面进行操作了。当然了，没看过WWDC 这两个session的可以从参考链接进入先看一下概念。
 
 贴心的我还准备了[demo](https://github.com/kekeYezi/iOS-Startup-Optimize-Demo)给大家边运行边看博客～
