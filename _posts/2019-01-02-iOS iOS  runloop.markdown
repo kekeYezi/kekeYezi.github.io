@@ -74,21 +74,31 @@ runloop 就是一个循环线程，常驻 一直在跑的，核心功能就是�
 
 
 
-### 主线程卡顿
+结合demo代码看效果最佳，注释和示例都在demo中
+
+### 主线程卡顿检测
 
 ____
 
-https://blog.csdn.net/u011619283/article/details/53666009
+https://github.com/kekeYezi/KKRunLoopDemo/blob/master/KKRunLoopDemo/KKRunLoopDemo/ViewControllers/MainThreadMonitorViewController.m
 
 
+
+扩展阅读：
+
+https://www.jianshu.com/p/ea36e0f2e7ae 
+
+https://www.jianshu.com/p/c8ee2103ca92
+
+看到介绍多种卡顿检测方法
 
 ### 线程保活
 
 ____
 
-https://blog.csdn.net/u011619283/article/details/53433243
+https://github.com/kekeYezi/KKRunLoopDemo/blob/master/KKRunLoopDemo/KKRunLoopDemo/ViewControllers/ThreadAliveViewController.m
 
-runloop 用于创建常驻线程 AF里面有用
+
 
 ### 异步渲染
 
@@ -104,7 +114,7 @@ sunnyxx的UITableView+FDTemplateLayoutCell利用Observer在界面空闲状态下
 
 _____
 
-https://blog.csdn.net/u011619283/article/details/53436907
+运用场景太多 也比较简单 不再赘述
 
 
 
@@ -112,7 +122,7 @@ https://blog.csdn.net/u011619283/article/details/53436907
 
 ____
 
-https://blog.csdn.net/u011619283/article/details/53483965
+暂时没有遇到场景，有需要再研究
 
 
 
@@ -230,6 +240,14 @@ struct __CFRunLoopTimer {
 
 ###参考资料
 
+官方文档 有必要看一下
+
+[https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html](https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html)
+
+[https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24](
+
+经典博客内容
+
 [https://v.youku.com/v_show/id_XODgxODkzODI0.html](https://v.youku.com/v_show/id_XODgxODkzODI0.html)
 
 [https://blog.ibireme.com/2015/05/18/runloop/](https://blog.ibireme.com/2015/05/18/runloop/)
@@ -258,8 +276,7 @@ cocoachina 总结
 
 [https://www.jianshu.com/p/6c10ca55d343](https://www.jianshu.com/p/6c10ca55d343)
 
-官方文档 有必要看一下
+运用总结
 
-[https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html](https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html)
+https://www.jianshu.com/p/adf9eb244e81
 
-[https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24)
