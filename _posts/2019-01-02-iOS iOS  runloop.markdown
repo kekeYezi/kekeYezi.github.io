@@ -28,7 +28,7 @@ tags: iOS
 
 本来是想一篇文章解释很多内容，后面发现工作量太大了，我们就从实际出发，过程中介绍一下概念神马的。
 
-友情推荐[demo工程](https://github.com/kekeYezi/KKRunLoopDemo)  里面包含了RunLoop源码和运用场景Demo。
+友情推荐 [KKRunLoopDemo](https://github.com/kekeYezi/KKRunLoopDemo/tree/master/KKRunLoopDemo/KKRunLoopDemo)  里面包含了RunLoop源码和运用场景Demo。
 
 ### 正文
 
@@ -106,7 +106,7 @@ ____
 
 [YYAsyncLayer](https://github.com/ibireme/YYAsyncLayer) 
 
-sunnyxx的UITableView+FDTemplateLayoutCell利用Observer在界面空闲状态下计算出UITableViewCell的高度并进行缓存。
+https://github.com/forkingdog/UITableView-FDTemplateLayoutCell（后续没发现相关runloop代码，之前博客有提到，应该后续去掉了？）
 
 获取线程或者app空闲的时候
 
@@ -244,7 +244,7 @@ struct __CFRunLoopTimer {
 
 [https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html](https://opensource.apple.com/source/CF/CF-635.19/CFRunLoop.c.auto.html)
 
-[https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24](
+[https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW24)
 
 经典博客内容
 
