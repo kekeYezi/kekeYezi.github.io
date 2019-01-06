@@ -104,11 +104,47 @@ https://github.com/kekeYezi/KKRunLoopDemo/blob/master/KKRunLoopDemo/KKRunLoopDem
 
 ____
 
+[AsyncDisplayKit](https://github.com/search?utf8=%E2%9C%93&q=AsyncDisplayKit&type=)
+
 [YYAsyncLayer](https://github.com/ibireme/YYAsyncLayer) 
+
+```
+static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
+    if (transactionSet.count == 0) return;
+    NSSet *currentSet = transactionSet;
+    transactionSet = [NSMutableSet new];
+    [currentSet enumerateObjectsUsingBlock:^(YYTransaction *transaction, BOOL *stop) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [transaction.target performSelector:transaction.selector];
+#pragma clang diagnostic pop
+    }];
+}
+
+static void YYTransactionSetup() {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        transactionSet = [NSMutableSet new];
+        CFRunLoopRef runloop = CFRunLoopGetMain();
+        CFRunLoopObserverRef observer;
+        // 获取线程或者app空闲的时候 还选定了优先级 0xFFFFFF 低于系统coreAnimation
+        observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(),
+                                           kCFRunLoopBeforeWaiting | kCFRunLoopExit,
+                                           true,      // repeat
+                                           0xFFFFFF,  // after CATransaction(2000000)
+                                           YYRunLoopObserverCallBack, NULL);
+        CFRunLoopAddObserver(runloop, observer, kCFRunLoopCommonModes);
+        CFRelease(observer);
+    });
+}
+
+```
 
 https://github.com/forkingdog/UITableView-FDTemplateLayoutCell（后续没发现相关runloop代码，之前博客有提到，应该后续去掉了？）
 
-获取线程或者app空闲的时候
+相较于其他场景，这里运用的RunLoop知识和主线程卡顿很像，都是利用监控 RunLoop 的状态做事情。 这里是kCFRunLoopBeforeWaiting kCFRunLoopExit这两个间隙做计算，**（监控线程卡顿是 kCFRunLoopBeforeSources kCFRunLoopAfterWaiting 这两个状态）**。
+
+
 
 ### NSTimer
 
@@ -275,6 +311,10 @@ cocoachina 总结
 解释为什么是before 和 after wait 判断卡顿
 
 [https://www.jianshu.com/p/6c10ca55d343](https://www.jianshu.com/p/6c10ca55d343)
+
+讲解YYAsyncLayer
+
+http://www.cocoachina.com/ios/20180709/24092.html
 
 运用总结
 
