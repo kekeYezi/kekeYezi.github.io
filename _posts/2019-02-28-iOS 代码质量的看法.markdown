@@ -1,0 +1,53 @@
+---
+layout: post  
+title: iOS 代码质量随想
+date: 2019-02-28 
+description: iOS 代码质量随想
+tags: 代码质量
+---
+
+借着今天公司有分享设计模式 简单记录下自己对“高”质量代码和设计模式的理解。
+
+众所周知设计模式有六大核心的思想原则。引用一段百度百科的介绍 [传送门](https://baike.baidu.com/item/设计模式/1212549?fr=aladdin#3_6)
+
+```
+为什么要提倡“Design Pattern呢？根本原因是为了代码复用，增加可维护性。那么怎么才能实现代码复用呢？面向对象有几个原则：单一职责原则 （Single Responsiblity Principle SRP）开闭原则（Open Closed Principle，OCP）、里氏代换原则（Liskov Substitution Principle，LSP）、依赖倒转原则（Dependency Inversion Principle，DIP）、接口隔离原则（Interface Segregation Principle，ISP）、合成/聚合复用原则（Composite/Aggregate Reuse Principle，CARP）、最小知识原则（Principle of Least Knowledge，PLK，也叫迪米特法则）。开闭原则具有理想主义的色彩，它是面向对象设计的终极目标。其他几条，则可以看做是开闭原则的实现方法。
+```
+
+其实说是为了代码复用，也可以说是为了写“好”代码，写“高”质量的代码。那么什么样的代码才能算是好的代码呢？那么我就简单的记录下此时自己的理解吧。
+
+
+
+####可阅读性高/理解成本低
+
+
+
+#### 维护成本低
+
+
+
+#### 复用程度高
+
+
+
+#### 性能好
+
+
+
+后续再扩展说明吧 先到这
+
+
+
+
+
+###写在最后：
+
+Better Late Than Never ，愿我们都能跨出自己的第一步。
+
+站在巨人的肩膀上，感谢前辈们的文章。
+
+
+
+##参考链接：
+
+https://juejin.im/post/5c1b60a8e51d4523ca0a14c6
