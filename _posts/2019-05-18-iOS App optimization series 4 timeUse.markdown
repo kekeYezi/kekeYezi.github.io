@@ -71,7 +71,7 @@ tags: 质量
 
 他将启动流程定义为这几个流程
 
-![image-20190519154419217](/Users/keke/Library/Application Support/typora-user-images/image-20190519154419217.png)
+![image-20190519154419217](/assets/images/2019-05/code_time.png)
 
 定义了一下几个时间点进行Hook 统计
 
@@ -183,6 +183,10 @@ __attribute__((__naked__)) static void hook_Objc_msgSend() {
 * 手动打点
 
 还有很多并不是通用的逻辑 我们也希望能在线上进行监控统计，那其实就和埋点一样 虽然有无痕埋点的策略，但是还是有少部分需求需要定制化，特殊化处理。比如我们需要监控某个请求链（多个接口返回合并算业务成功）这个时候手动埋点可能就更方便。
+
+* 网络耗时
+
+资料待整理，这块也是利用系统给的回调函数做AOP分析
 
 #### 总结一下：
 
