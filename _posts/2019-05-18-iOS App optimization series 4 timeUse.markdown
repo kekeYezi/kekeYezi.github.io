@@ -23,6 +23,7 @@ tags: 质量
 }
 
 + (NSTimeInterval)processStartTime
+{
     struct kinfo_proc kProcInfo;
     if ([self processInfoForPID:[[NSProcessInfo processInfo] processIdentifier] procInfo:&kProcInfo]) {
         return kProcInfo.kp_proc.p_un.__p_starttime.tv_sec * 1000.0 + kProcInfo.kp_proc.p_un.__p_starttime.tv_usec / 1000.0;
