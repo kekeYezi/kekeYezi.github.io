@@ -97,7 +97,7 @@ tags: 优化
 
 ### 帮助开发者做什么？
 
-![APM.001](/Users/keke/Downloads/APM/APM.001.png)
+![APM.001](/assets/images/2019-05/APM.001.png)
 
 有了这么多数据我们能利用这些做什么呢？
 
