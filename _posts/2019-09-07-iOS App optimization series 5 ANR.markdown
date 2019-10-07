@@ -2,8 +2,8 @@
 layout: post  
 title: iOS App Optimization series 5 卡顿优化
 date: 2019-09-07 
-description: iOS App Optimization series 5 优化
-tags: 质量
+description: iOS App Optimization series 5 卡顿优化
+tags: 优化
 ---
 
 ### 0X01理论
