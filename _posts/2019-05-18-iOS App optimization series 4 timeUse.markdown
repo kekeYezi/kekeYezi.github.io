@@ -3,7 +3,7 @@ layout: post
 title: iOS App Optimization series 4 耗时统计
 date: 2019-05-18 
 description: iOS App Optimization series 4 耗时统计
-tags: 质量
+tags: 优化
 ---
 
 对于耗时统计作用最有价值的莫过于以下几点
