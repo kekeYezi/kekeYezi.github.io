@@ -152,3 +152,5 @@ Better Late Than Never ，愿我们都能跨出自己的第一步。
 [https://zhuanlan.zhihu.com/p/38183046?https://chars.tech/blog/ios-app-launch-time-optimize](https://zhuanlan.zhihu.com/p/38183046?https://chars.tech/blog/ios-app-launch-time-optimize)
 
 [https://techblog.toutiao.com/2017/01/17/iosspeed](https://techblog.toutiao.com/2017/01/17/iosspeed)
+
+https://ming1016.github.io/2019/12/07/how-to-analyze-startup-time-cost-in-ios/
