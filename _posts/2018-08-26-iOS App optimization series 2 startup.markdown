@@ -154,3 +154,6 @@ Better Late Than Never ，愿我们都能跨出自己的第一步。
 [https://techblog.toutiao.com/2017/01/17/iosspeed](https://techblog.toutiao.com/2017/01/17/iosspeed)
 
 https://ming1016.github.io/2019/12/07/how-to-analyze-startup-time-cost-in-ios/
+
+https://juejin.im/post/5e65bd66e51d4526c26fcd0d
+
