@@ -162,3 +162,7 @@ https://ming1016.github.io/2019/12/07/how-to-analyze-startup-time-cost-in-ios/
 https://everettjf.github.io/2018/08/06/ios-launch-performance-collection/
 
 https://mp.weixin.qq.com/s/CIkpPlTrpMEV9lRTwcABrA
+
+https://www.jianshu.com/p/19b24fd4482b
+
+https://mp.weixin.qq.com/s/SUHaGD1T2Vce4Ag-qgxtgg
